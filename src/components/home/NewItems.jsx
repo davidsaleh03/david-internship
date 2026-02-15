@@ -6,7 +6,8 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import axios from "axios";
-import Countdown from "./Countdown";
+import Countdown from "../UI/Countdown";
+import Skeleton from "../UI/Skeleton";
 
 const NewItems = () => {
   const [data, setData] = useState([]);
@@ -57,14 +58,7 @@ const NewItems = () => {
                         data-bs-placement="top"
                         title="Creator: Monica Lucas"
                       >
-                        <div
-                          className="skeleton-box"
-                          style={{
-                            width: "50px",
-                            height: "50px",
-                            borderRadius: "50%",
-                          }}
-                        ></div>
+                        <Skeleton width='50px' height='50px' borderRadius='50%' />
                         <i className="fa fa-check"></i>
                       </Link>
                     </div>
@@ -88,16 +82,16 @@ const NewItems = () => {
                       </div>
 
                       <Link to="/item-details">
-                        <div className="skeleton-box" style={{width: '100%', height: '350px'}}></div>
+                        <Skeleton width='100%' height='350px' />
                       </Link>
                     </div>
                     <div className="nft__item_info">
                       <Link to="/item-details">
-                        <div className="skeleton-box" style={{width: '180px', height: '30px'}}></div>
+                      <Skeleton width='100px' height='30px' />
                       </Link>
-                      <div className="skeleton-box" style={{width: '100px', height: '20px'}}></div>
+                      <Skeleton width='100px' height='20px' />
                       <div className="nft__item_like flex">
-                        <div className="skeleton-box" style={{width: '30px', height: '15px'}}></div>
+                        <Skeleton width='30px' height='15px' />
                       </div>
                     </div>
                   </div>
