@@ -6,6 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
+import Skeleton from "../UI/Skeleton";
 
 
 
@@ -56,20 +57,20 @@ const HotCollections = () => {
               <div className="nft_coll">
                 <div className="nft_wrap">
                   <Link to="/item-details">
-                    <div className="skeleton-box" style={{ width: "100%", height: "200px" }}></div>
+                    <Skeleton width='100%' height='200px' />
                   </Link>
                 </div>
                 <div className="nft_coll_pp">
                   <Link to="/author">
-                    <div className="skeleton-box" style={{ width: "50px", height: "50px", borderRadius: '50%' }}></div>
+                    <Skeleton width='50px' height='50px' borderRadius='50%' />
                   </Link>
                   <i className="fa fa-check"></i>
                 </div>
                 <div className="nft_coll_info nft_coll_info-2">
                   <Link to="/explore">
-                    <div className="skeleton-box" style={{ width: "100px", height: "20px" }}></div>
+                  <Skeleton width='100pc' height='20px' />
                   </Link>
-                  <div className="skeleton-box" style={{ width: "60px", height: "20px" }}></div>
+                  <Skeleton width='60px' height='20px' />
                 </div>
               </div>
             </div>
