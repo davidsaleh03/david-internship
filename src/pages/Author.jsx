@@ -23,7 +23,7 @@ const Author = () => {
       setFollowers(data.followers)
     }
     fetchData();
-  }, []);
+  }, [authorId]);
   return (
     <div id="wrapper">
       <div className="no-bottom no-top" id="content">
