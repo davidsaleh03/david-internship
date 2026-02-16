@@ -9,6 +9,8 @@ import axios from "axios";
 import Countdown from "../UI/Countdown";
 import Skeleton from "../UI/Skeleton";
 import Card from "../UI/Card";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const NewItems = () => {
   const [data, setData] = useState([]);
@@ -24,6 +26,12 @@ const NewItems = () => {
     }
     fetchData();
   }, []);
+  
+  useEffect(() => {
+  AOS.init({
+    once: true,
+  });
+}, []);
 
   const options = {
     loop: true,
@@ -40,7 +48,7 @@ const NewItems = () => {
   return (
     <section id="section-items" className="no-bottom">
       <div className="container">
-        <div className="row">
+        <div className="row" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="500">
           <div className="col-lg-12">
             <div className="text-center">
               <h2>New Items</h2>
