@@ -4,8 +4,11 @@ import AuthorImage from "../../images/author_thumbnail.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Skeleton from "../UI/Skeleton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TopSellers = () => {
+  AOS.init();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -19,6 +22,12 @@ const TopSellers = () => {
     }
     fetchData();
   }, []);
+
+  useEffect(() => {
+  AOS.init({
+    once: true,
+  });
+}, []);
   return (
     <section id="section-popular" className="pb-5">
       <div className="container">
@@ -29,7 +38,7 @@ const TopSellers = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-md-12">
+          <div className="col-md-12" data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="500">
             <ol className="author_list">
               {
                 loading 
