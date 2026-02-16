@@ -22,7 +22,7 @@ const ItemDetails = () => {
       setLoading(false);
     }
     fetchData();
-  }, []);
+  }, [nftId]);
 
   return (
     <div id="wrapper">
