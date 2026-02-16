@@ -16,7 +16,6 @@ const TopSellers = () => {
       );
       setData(data);
       setLoading(false);
-      console.log(data)
     }
     fetchData();
   }, []);
